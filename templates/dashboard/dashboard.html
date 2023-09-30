@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}
+Dashboard
+{% endblock %}
+{% block content %}
+
+<div class="max-w-4xl mx-auto p-6">
+    {% if request.user.is_customer %}
+    <p class="text-7xl">Customer Dashboard</p>
+    {% elif request.user.is_engineer %}
+    <p class="text-6xl">Engineer Dashboard</p>
+    {% endif %}
+</div>
+{% endblock %}

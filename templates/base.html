@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>{% block title %} {% endblock %}| Ticket</title>
+</head>
+<body class="bg-slate-50">
+    <header class="bg-gray-100 border border-solid border-gray-200 z-10 sticky p-6">
+        <nav class="max-w-4xl mx-auto flex items-center justify-between">
+            <div class="">
+                <a href="/" class="text-3xl">Ticket</a>
+            </div>
+            <div class="space-x-6">
+                {% if request.user.is_customer %}
+                <div class="space-x-4">
+                <a href="{% url 'create-ticket' %}" class="text-gray-800 text-xl hover:text-gray-600">Create ticket</a>
+                <a href="{% url 'all-tickets' %}" class="text-gray-800 text-xl hover:text-gray-600">all tickets</a>
+                </div>
+                {% elif request.user.is_engineer %}
+                <div class="space-x-4">
+                    <a href="{% url 'all-tickets' %}" class="text-gray-800 text-xl hover:text-gray-600">Manage ticket</a>
+                    <a href="{% url 'ticket-queue' %}" class="text-gray-800 text-xl hover:text-gray-600">Ticket Queue</a>
+                    <a href="{% url 'workspace' %}" class="text-gray-800 text-xl hover:text-gray-600">Workspace</a>
+                  
+                    <a href="{% url 'all-closed-tickets' %}" class="text-gray-800 text-xl hover:text-gray-600">All closed ticket</a> 
+                     </div>
+                {% endif %}
+            </div>
+        
+            <div class="space-x-6">
+                <a href="{% url 'logout' %}" class="text-gray-800 text-xl hover:text-gray-600">Logout</a>
+                <a href="{% url 'login' %}" class="text-gray-800 text-xl hover:text-gray-600">Login</a>
+                <a href="{% url 'register-customer' %}" class="text-gray-800 text-xl hover:text-gray-600">Register</a>
+            </div>
+        </nav>
+    </header>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

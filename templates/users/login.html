@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}
+Login
+{% endblock %}
+{% block content %}
+<div class="max-w-xs mx-auto my-20 shadow-2xl rounded-lg p-6 bg-slate-100">
+    <h2 class="text-3xl my-4 font-semibold text-gray-800 text-center">Log in</h2>
+    <form action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+        {% for field in form %}
+        <label for="" class="text-xl text-gray-800">{{field.label_tag}}</label>
+        {{field}}
+        {% endfor %}
+        <input type="submit" value="Log in" class="w-full px-6 py-4 rounded-lg bg-blue-500 hover:bg-blue-700 text-white font-semibold">
+    </form>
+</div>
+{% endblock %}

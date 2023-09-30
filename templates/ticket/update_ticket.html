@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}
+Update 
+{% endblock %}
+{% block content %}
+<div class="max-w-sm mx-auto p-6 shadow rounded-2xl my-10 bg-slate-200">
+    <form action="." method="post">
+        <h2 class="text-3xl text-center font-semibold text-gray-800">update ticket</h2>
+        {% csrf_token  %}
+         {% for field in form %}
+         <label for="" class="text-xl text-gray-800 mb-3 block font-medium">{{field.label_tag}}</label>
+         {{field}}
+         {% endfor %}
+         <input type="submit" value="submit" class="w-full font-semibold text-white rounded-lg bg-teal-600 hover:bg-teal-700 px-6 py-4">
+    </form>
+</div>>
+{% endblock %}

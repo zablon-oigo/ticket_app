@@ -20,10 +20,8 @@
                 </div>
                 {% elif request.user.is_engineer %}
                 <div class="space-x-4">
-                    <a href="{% url 'all-tickets' %}" class="text-gray-800 text-xl hover:text-gray-600">Manage ticket</a>
                     <a href="{% url 'ticket-queue' %}" class="text-gray-800 text-xl hover:text-gray-600">Ticket Queue</a>
                     <a href="{% url 'workspace' %}" class="text-gray-800 text-xl hover:text-gray-600">Workspace</a>
-                  
                     <a href="{% url 'all-closed-tickets' %}" class="text-gray-800 text-xl hover:text-gray-600">All closed ticket</a> 
                      </div>
                 {% endif %}
@@ -38,5 +36,10 @@
     </header>
     {% block content %}
     {% endblock %}
+    <footer class="bg-gray-100 p-6">
+        <div class="max-w-4xl mx-auto">
+            <p class="text-sm text-gray-800 text-center m-6">&copy; Copyright <span class="">{% now 'Y'%}</span></p>
+        </div>
+    </footer>
 </body>
 </html>

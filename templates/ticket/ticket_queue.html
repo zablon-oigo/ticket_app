@@ -40,7 +40,7 @@ Ticket Queue
                                     {% endif %}
                                 </td>
                                 <td class="text-sm text-blue-900 font-light px-6 py-4 whitespace-nowrap">
-                                    <a href="{% url 'ticket-details' ticket.pk %}">View Details</a></td>
+                                    <a href="{% url 'accept-ticket' ticket.pk %}">Accept ticket</a></td>
                                
                             </tr>
                             {% endfor %}

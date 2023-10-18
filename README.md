@@ -1,14 +1,14 @@
 
 # ticket_app
-A user-friendly ticket system that streamlines issue resolution by allowing users to input their problems directly. Users key in their issues, providing essential details, such as description, severity. The system then assigns a unique ticket number for tracking. Skilled engineers review these tickets and work on solutions. Once a problem is resolved, the engineer updates the ticket status and notifies the customer, ensuring transparency and timely communication. This efficient process enhances customer satisfaction by reducing response times and facilitating efficient issue resolution, enabling businesses to improve their products and services.
+A user-friendly ticket system that streamlines issue resolution by allowing users to input their problems directly. Users key in their issues, providing essential details,  description, and severity. The system then assigns a unique ticket number for tracking. Skilled engineers review these tickets and work on solutions. Once a problem is resolved, the engineer updates the ticket status and notifies the customer, ensuring transparency and timely communication. This efficient process enhances customer satisfaction by reducing response times and facilitating efficient issue resolution, enabling businesses to improve their products and services.
 
 ## Demo
 
 
 ## Screenshots
+![Screenshot 2023-10-18 at 21-05-47 Dashboard Ticket](https://github.com/zablon-oigo/ticket_app/assets/143833326/cdf3264c-20db-4a08-bdea-ae5050c767bb)
 
-![Screenshot 2023-10-18 at 20-52-05 Dashboard Ticket](https://github.com/zablon-oigo/ticket_app/assets/143833326/eed5aaf8-c70f-49d8-9f56-edf4a46cd45b)
-
+![Screenshot 2023-10-18 at 20-59-52 Dashboard Ticket](https://github.com/zablon-oigo/ticket_app/assets/143833326/7d4080ea-e006-4adf-b8d8-a0685f5ac68d)
 
 ![Screenshot 2023-10-18 at 20-19-16 all tickets Ticket](https://github.com/zablon-oigo/ticket_app/assets/143833326/d748b3b0-6fce-466a-bf4a-3f4e82f83ea7)
 ![Screenshot 2023-10-18 at 20-19-53 Software Patch Ticket](https://github.com/zablon-oigo/ticket_app/assets/143833326/cd74dc9a-73ba-4b7d-bf2f-136e718e0ec4)

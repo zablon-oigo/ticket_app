@@ -38,8 +38,10 @@ def login_user(request):
                 login(request, user)
                 messages.info(request,'Log in sucessfully')
                 return redirect('dashboard')
+            messages.warning(request,'Invalid username or password')
+            return redirect('login')
     else:
-        messages.warning(request,'Invalid username or password')
+        
         form=LoginForm()
         return render(request,'users/login.html',{'form':form})
 

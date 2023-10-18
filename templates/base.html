@@ -12,7 +12,13 @@
             <div class="">
                 <a href="/" class="text-3xl">Ticket</a>
             </div>
-            <div class="space-x-6">
+            <button id="hamburger-button" class="relative h-8 w-8 cursor-pointer text-3xl md:hidden">
+                <!-- &#9776; -->
+                <div
+                  class="absolute top-4 -mt-0.5 h-1 w-8 rounded bg-white transition-all duration-500 before:absolute before:h-1 before:w-8 before:-translate-x-4 before:-translate-y-3 before:rounded before:bg-white before:transition-all before:duration-500 before:content-[''] after:absolute after:h-1 after:w-8 after:-translate-x-4 after:translate-y-3 after:rounded after:bg-white after:transition-all after:duration-500 after:content-['']">
+                </div>
+              </button>
+            <div class="space-x-6 ">
                 {% if request.user.is_customer %}
                 <div class="space-x-4">
                 <a href="{% url 'create-ticket' %}" class="text-gray-800 text-xl hover:text-gray-600">Create ticket</a>
@@ -27,12 +33,24 @@
                 {% endif %}
             </div>
         
-            <div class="space-x-6">
+            <div class="space-x-6 ">
                 <a href="{% url 'logout' %}" class="text-gray-800 text-xl hover:text-gray-600">Logout</a>
                 <a href="{% url 'login' %}" class="text-gray-800 text-xl hover:text-gray-600">Login</a>
                 <a href="{% url 'register-customer' %}" class="text-gray-800 text-xl hover:text-gray-600">Register</a>
             </div>
-        </nav>
+            <section id="mobile-menu"
+      class="top-68 justify-content-center absolute hidden w-full origin-top animate-open-menu flex-col bg-black text-5xl">
+      <button class="text-8xl self-end px-6">
+                &times;
+            </button>
+      <div class="flex min-h-screen flex-col items-center py-8" aria-label="mobile">
+        <a href="{% url 'logout' %}" class="w-full py-6 text-center hover:opacity-90">Home</a>
+        <a href="{% url 'login' %}" class="w-full py-6 text-center hover:opacity-90">Our Rockets</a>
+        <a href="{% url 'register-customer' %}" class="w-full py-6 text-center hover:opacity-90">Testimonials</a>
+        <a href="" class="w-full py-6 text-center hover:opacity-90">Contact Us</a>
+        <a href="" class="w-full py-6 text-center hover:opacity-90">Legal</a>
+      </div>
+    </section>
     </header>
     {% block content %}
     {% endblock %}
@@ -43,3 +61,4 @@
     </footer>
 </body>
 </html>
+

@@ -8,14 +8,26 @@ Dashboard
     <div class="">
         {% if request.user.is_customer %}
         <div class="flex justify-between items-center flex-col-reverse sm:flex-row">
-            <p class="sm:text-7xl w-full text-center text-4xl">Customer Dashboard</p>
+           <div class="">
+            <p class="sm:text-6xl w-full text-center text-4xl">Customer Dashboard</p>
+            <p class="text-2xl text-gray-800 text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores amet pariatur unde harum vitae itaque laudantium cum inventore maxime repellat!</p>
+           </div>
+
             {% load static %}
              <img src="{% static 'image/header.png' %}" alt="" class="h-80 w-80 object-center object-cover">
         </div>
    
     {% elif request.user.is_engineer %}
-    <p class="text-6xl">Engineer Dashboard</p>
-    <p class="text-2xl text-gray-800">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores amet pariatur unde harum vitae itaque laudantium cum inventore maxime repellat!</p>
+    <div class="flex justify-between items-center flex-col-reverse sm:flex-row">
+        <div class="">
+            <p class="text-6xl">Engineer Dashboard</p>
+        <p class="text-2xl text-gray-800">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores amet pariatur unde harum vitae itaque laudantium cum inventore maxime repellat!</p>
+        </div>
+        {% load static %}
+                 <img src="{% static 'image/header2.png' %}" alt="" class="h-80 w-80 object-center object-cover">
+
+    </div>
+    
     {% endif %}
 
     </div>

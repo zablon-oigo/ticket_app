@@ -1,0 +1,7 @@
+ .ticket
+ dashboard/__pycache__
+ __pycache__
+users\__pycache__
+ticket\__pycache__
+users\migrations\__pycache__
+.ticket/

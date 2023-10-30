@@ -4,6 +4,11 @@ A user-friendly ticket system that streamlines issue resolution by allowing user
 
 ## Demo
 
+## Tech Stack
+
+**Client:** Html, JAvascript, TailwindCSS
+
+**Server:** Python, Django
 
 ## Screenshots
 ![Screenshot 2023-10-18 at 21-05-47 Dashboard Ticket](https://github.com/zablon-oigo/ticket_app/assets/143833326/cdf3264c-20db-4a08-bdea-ae5050c767bb)

@@ -6,7 +6,7 @@ A user-friendly ticket system that streamlines issue resolution by allowing user
 
 ## Tech Stack
 
-**Client:** Html, JAvascript, TailwindCSS
+**Client:** Html, Javascript, TailwindCSS
 
 **Server:** Python, Django
 
